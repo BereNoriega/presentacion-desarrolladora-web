@@ -14,6 +14,6 @@
 
 ## Con el apoyo de:
 
-###Ana García, Alura LATAM, Oracle ONE.
+###Barbara Santos, Alura LATAM, Oracle ONE.
 
 ### Linkedin: https://www.linkedin.com/in/berenice-noriega/
