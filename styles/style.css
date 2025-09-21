@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{ /*definimos variables para que sea utilizable en todo el codigo*/
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+/*con rem el font size siempre sera de 16px, entonces 2rem seria de 32 y asi*/
+
+
+*{ /* se usa asterisco cuando quiero hacer cambios en todos los elementos del documento*/
+    padding: 0;
+    margin:0;
+}
+body{
+    background-color: var(--color-primario); /*con var llamamos las variables que definimos arriba en root*/
+    box-sizing: border-box;
+    color:var(--color-secundario);
+}
+
+.header{
+    padding: 2% 0% 0% 15%; /*solo le agregamos en el top y left*/
+
+}
+
+.header_menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header_menu_link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:var(--color-terciario);
+    text-decoration: none;
+}
+
+
+.foto_perfil{
+    /* width: 700px; */
+    width: 50%; /*con porcentaje lo hacemos responsiva y cambiable, y estoy diciendo que quiero que siempre ocupe 50% de mi pantallas, sin importar el tama;o de pantalla*/
+    height: auto;
+
+}
+
+/* .foto_perfil:hover{
+    width: 900px;
+} */
+
+.presentacion{
+    padding: 6% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion_contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion_contenido_titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+
+}
+
+.titulo-destacado{
+    color:var(--color-terciario);
+}
+
+.presentacion_contenido_texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+
+}
+
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between ;
+    flex-direction: column;
+    align-items: center; /*es el equivalene a justify-content, pero para cuando estan en vertical en vez de horizontal*/
+    gap:32px;
+}
+
+.presentacion_enlaces_subtitulo{
+    font-size: 1.5rem;
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+
+}
+.presentacion_enlaces_link{
+    width: 50%;
+    text-align: center; /*poner al centro del boton el texto*/
+    padding: 21.5px 0;/*que tan grande el botonprimer valor es vertical y el segundo el horizontal*/
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario); /*estoy definiendo grosor, estilo e borde y color*/
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.presentacion_enlaces_link:hover{ /*hover es para hacerlo interactivo cuando para el raton*/
+    background-color: var(--color-hover);
+}
+
+.footer{
+    background-color:var(--color-terciario);
+    padding: 1.5rem;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px){ /* media query: estamos diciendo que cuando se supere ese umbral, vamos a cambiar las especificaciones de x elementos*/
+
+    .header{
+        padding: 10%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse; /*el reverse hizo que la imagen se fuer apara arriba en vez de abajo cuando se hacia el cambio de pantalla*/
+        padding: 5% /*si pongo un solo valor lo estoy aplicando para todos lados*/
+    }
+
+    .presentacion_contenido{
+        width: auto; /*se adapta a las secciones y elemento*/
+
+        /*Tambien puede ser
+        width: 100%;*/
+    }
+
+}
